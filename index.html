@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Raghu Vamsi Kodaboina | EV • Hydrogen • AI-enabled Simulation</title>
+  <meta name="description" content="Powertrain & Energy Systems Simulation Lead | EV Thermal | Hydrogen | AI-enabled Modeling | GT-Suite | Simulink | Python" />
+
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#121a33;
+      --text:#e7ebff;
+      --muted:#b7c0ffcc;
+      --accent:#6ee7ff;
+      --accent2:#a78bfa;
+      --line:#25305c;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: radial-gradient(1000px 600px at 30% 10%, rgba(110,231,255,.15), transparent 60%),
+                  radial-gradient(900px 500px at 70% 20%, rgba(167,139,250,.15), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px; margin:0 auto; padding:28px 18px 70px}
+    .topbar{
+      display:flex; justify-content:space-between; align-items:center;
+      padding:14px 0 22px;
+      border-bottom:1px solid var(--line);
+    }
+    .brand{display:flex; flex-direction:column; gap:2px}
+    .brand h1{font-size:20px; margin:0}
+    .brand p{margin:0; color:var(--muted); font-size:13px}
+    .links{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    .pill{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      padding:8px 10px;
+      border-radius:999px;
+      font-size:13px;
+    }
+    .hero{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:22px;
+      padding:30px 0 16px;
+      align-items:stretch;
+    }
+    .heroCard{
+      background: rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    .headline{
+      font-size:38px;
+      line-height:1.15;
+      margin:0 0 12px;
+      letter-spacing:-0.4px;
+    }
+    .subhead{
+      margin:0 0 16px;
+      color:var(--muted);
+      font-size:16px;
+      max-width:62ch;
+    }
+    .tagRow{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px}
+    .tag{
+      border:1px solid var(--line);
+      background: linear-gradient(90deg, rgba(110,231,255,.12), rgba(167,139,250,.12));
+      padding:7px 10px;
+      border-radius:999px;
+      font-size:13px;
+      color:#f0f3ff;
+    }
+    .mini{
+      display:flex; flex-direction:column; gap:10px;
+    }
+    .mini .box{
+      background: rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:16px;
+    }
+    .box h3{margin:0 0 6px; font-size:15px}
+    .box p{margin:0; color:var(--muted); font-size:13px}
+    .section{
+      margin-top:26px;
+    }
+    .section h2{
+      margin:0 0 12px;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    .card{
+      background: rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow: 0 10px 26px rgba(0,0,0,.22);
+      display:flex; flex-direction:column;
+      min-height: 100%;
+    }
+    .card .img{
+      height:145px;
+      background: linear-gradient(135deg, rgba(110,231,255,.18), rgba(167,139,250,.18));
+      display:flex; align-items:center; justify-content:center;
+      border-bottom:1px solid var(--line);
+      position:relative;
+    }
+    .img span{
+      color:rgba(231,235,255,.8);
+      font-size:13px;
+      padding:8px 10px;
+      border:1px dashed rgba(231,235,255,.25);
+      border-radius:12px;
+    }
+    .card .content{padding:16px}
+    .card h3{margin:0 0 8px; font-size:16px}
+    .card p{margin:0 0 12px; color:var(--muted); font-size:13px}
+    .bullets{margin:0; padding-left:18px; color:#dbe2ff; font-size:13px}
+    .bullets li{margin:6px 0}
+    .metaRow{
+      display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;
+    }
+    .chip{
+      font-size:12px;
+      padding:6px 8px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--muted);
+      background: rgba(255,255,255,.02);
+    }
+    .ctaRow{
+      display:flex;
+      gap:10px;
+      margin-top:14px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:9px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--text);
+      font-size:13px;
+    }
+    .btn.primary{
+      background: linear-gradient(90deg, rgba(110,231,255,.18), rgba(167,139,250,.18));
+      border-color: rgba(110,231,255,.35);
+    }
+    .twoCol{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    .panel{
+      background: rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:16px;
+    }
+    .panel h3{margin:0 0 8px; font-size:15px}
+    .panel ul{margin:0; padding-left:18px; color:#dbe2ff; font-size:13px}
+    .panel li{margin:6px 0}
+    .footer{
+      margin-top:30px;
+      padding-top:16px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    @media (max-width: 900px){
+      .hero{grid-template-columns: 1fr}
+      .grid{grid-template-columns:1fr}
+      .twoCol{grid-template-columns:1fr}
+      .headline{font-size:32px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="topbar">
+      <div class="brand">
+        <h1>Raghu Vamsi Kodaboina</h1>
+        <p>EV • Hydrogen • AI-enabled Powertrain Simulation | GT-Suite • Simulink • Python</p>
+      </div>
+      <div class="links">
+        <a class="pill" href="mailto:raghu7862@gmail.com">Email</a>
+        <a class="pill" href="https://www.linkedin.com/in/rvkodaboina" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="pill" href="#" target="_blank" rel="noreferrer">Google Scholar</a>
+        <a class="pill" href="#" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="pill" href="assets/resume/Raghu_Kodaboina_Resume.pdf" target="_blank" rel="noreferrer">Resume (PDF)</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="heroCard">
+        <h2 class="headline">Simulation-led engineering for EV thermal, Hydrogen & AI-accelerated powertrain development.</h2>
+        <p class="subhead">
+          16+ years across Nissan (Japan), Renault-Nissan, ZF, IAAPS (UK) and KAUST (KSA).
+          I build low-to-high fidelity 1D models, integrate thermal + controls, and accelerate design cycles using
+          surrogate/meta-models and optimization workflows.
+        </p>
+
+        <div class="tagRow">
+          <div class="tag">EV Thermal Systems</div>
+          <div class="tag">Hydrogen ICE</div>
+          <div class="tag">Fuel Cell Opportunity</div>
+          <div class="tag">Surrogate / Meta-Models</div>
+          <div class="tag">DoE + Multi-objective Optimization</div>
+          <div class="tag">Model-Based Development (MiL)</div>
+        </div>
+
+        <div class="ctaRow">
+          <a class="btn primary" href="#projects">View Flagship Projects</a>
+          <a class="btn" href="#skills">Skills & Tools</a>
+          <a class="btn" href="#publications">Publications</a>
+        </div>
+      </div>
+
+      <div class="mini">
+        <div class="box">
+          <h3>Impact Highlights</h3>
+          <p>Fuel efficiency + emissions + thermal performance improvements through model-based development and optimization.</p>
+        </div>
+        <div class="box">
+          <h3>What I bring</h3>
+          <p>System thinking, validated 1D models, cross-functional delivery, and AI-enabled acceleration for fast decisions.</p>
+        </div>
+        <div class="box">
+          <h3>Open to roles</h3>
+          <p>EV Thermal Systems • Hydrogen / Fuel Cell Simulation • AI-enabled CAE / Model-Based Engineering</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Flagship Projects</h2>
+
+      <div class="grid">
+
+        <!-- PROJECT 1 -->
+        <article class="card">
+          <div class="img">
+            <span>Replace this with: assets/images/proj1_pareto.png</span>
+          </div>
+          <div class="content">
+            <h3>1) AI-Accelerated GT-Suite Surrogate Modeling & Optimization</h3>
+            <p>
+              A complete pipeline from DoE → simulation runs → surrogate models → uncertainty checks →
+              Pareto optimization → validation back in the physics model.
+            </p>
+            <ul class="bullets">
+              <li>Surrogate models (GPR/XGBoost) to cut turnaround from hours/days → seconds</li>
+              <li>Multi-objective Pareto optimization (efficiency vs emissions vs thermal limits)</li>
+              <li>Automated post-processing + validation reporting for decision-ready insights</li>
+            </ul>
+            <div class="metaRow">
+              <span class="chip">Python</span>
+              <span class="chip">scikit-learn</span>
+              <span class="chip">Bayesian Optimization</span>
+              <span class="chip">GT-Suite datasets</span>
+            </div>
+            <div class="ctaRow">
+              <a class="btn primary" href="#" target="_blank" rel="noreferrer">GitHub Repo</a>
+              <a class="btn" href="#" target="_blank" rel="noreferrer">Results PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 2 -->
+        <article class="card">
+          <div class="img">
+            <span>Replace this with: assets/images/proj2_ev_thermal.png</span>
+          </div>
+          <div class="content">
+            <h3>2) EV Integrated Thermal Management Digital Twin (1D + Control Logic)</h3>
+            <p>
+              A vehicle-level thermal model that connects battery, inverter/motor cooling and cabin HVAC / heat pump loads,
+              enabling architecture comparison under real drive and fast-charge scenarios.
+            </p>
+            <ul class="bullets">
+              <li>Thermal networks + supervisory control logic (MiL-ready approach)</li>
+              <li>Scenarios: fast charge, hot soak, cold ambient warm-up and highway load</li>
+              <li>KPIs: thermal safety margin, range impact, energy split breakdown</li>
+            </ul>
+            <div class="metaRow">
+              <span class="chip">Thermal System Modeling</span>
+              <span class="chip">Controls Logic</span>
+              <span class="chip">Drive Cycles</span>
+              <span class="chip">Energy Breakdown</span>
+            </div>
+            <div class="ctaRow">
+              <a class="btn primary" href="#" target="_blank" rel="noreferrer">GitHub Repo</a>
+              <a class="btn" href="#" target="_blank" rel="noreferrer">Scenario Results</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 3 -->
+        <article class="card">
+          <div class="img">
+            <span>Replace this with: assets/images/proj3_tradeoffs.png</span>
+          </div>
+          <div class="content">
+            <h3>3) Hydrogen Powertrain Opportunity Mapper (DoE + Trade-off Maps)</h3>
+            <p>
+              A clean-powertrain study mapping efficiency, thermal behavior and emissions-risk proxies to identify
+              safe and high-performance operating zones for hydrogen ICE / clean system concepts.
+            </p>
+            <ul class="bullets">
+              <li>DoE + sensitivity analysis to identify key levers and robust zones</li>
+              <li>Trade-off contour maps and ranked operating region recommendations</li>
+              <li>Engineering summary for calibration/architecture decision-making</li>
+            </ul>
+            <div class="metaRow">
+              <span class="chip">Hydrogen ICE</span>
+              <span class="chip">DoE</span>
+              <span class="chip">Sensitivity</span>
+              <span class="chip">Optimization</span>
+            </div>
+            <div class="ctaRow">
+              <a class="btn primary" href="#" target="_blank" rel="noreferrer">GitHub Repo</a>
+              <a class="btn" href="#" target="_blank" rel="noreferrer">Trade-off Maps</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skills & Tool Stack</h2>
+      <div class="twoCol">
+        <div class="panel">
+          <h3>Simulation & System Engineering</h3>
+          <ul>
+            <li>1D/0D powertrain modeling (low ↔ high fidelity)</li>
+            <li>EV/Hybrid thermal + energy management integration</li>
+            <li>Hydrogen & clean powertrain system modeling</li>
+            <li>Model-Based Development (MiL), V&V, MBSE exposure</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Tools</h3>
+          <ul>
+            <li>GT-Suite, MATLAB/Simulink, AMESim, Ricardo Wave</li>
+            <li>Python (automation, analytics, ML pipelines)</li>
+            <li>Optimization / DoE / surrogate modeling workflows</li>
+            <li>Teamcenter, CATIA V5 (program delivery context)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="section">
+      <h2>Publications & Highlights</h2>
+      <div class="panel">
+        <ul>
+          <li>Waste Heat Recovery (Joule cycle), Hydrogen ICE strategy, hybrid systems and fuel cell research direction</li>
+          <li>Selected venues: Energy Journal (2025), SAE CAPRI (2025), ASME Turbo Expo (2024), KAUST APES (2024)</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div>© <span id="year"></span> Raghu Vamsi Kodaboina</div>
+      <div>Built for EV • H₂ • AI-enabled Simulation roles</div>
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
